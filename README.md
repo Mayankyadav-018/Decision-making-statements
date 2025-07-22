@@ -1,165 +1,269 @@
-Expt 5 - C++ decision making statements
+# EXPERIMENT NO. 05 
 
-Aim: To study and implement C++ decision making statements
-Theory:
-C++ decision making statements
-Sr.No	Statement & Description
-1	if statement
-An ‘if’ statement consists of a boolean expression followed by one or more statements.
-2	if...else statement
-An ‘if’ statement can be followed by an optional ‘else’ statement, which executes when the boolean expression is false.
-3	switch statement
-A ‘switch’ statement allows a variable to be tested for equality against a list of values.
-4	nested if statements
-You can use one ‘if’ or ‘else if’ statement inside another ‘if’ or ‘else if’ statement(s).
-5	nested switch statements
-You can use one ‘switch’ statement inside another ‘switch’ statement(s).
+* Aim: To understand and implement conditional control statements in C++ using if-else and switch-case to enable decision-making in programs based on different conditions.
 
-1.	C++ Conditions and If Statements
+* Tools Used: IDE, Decision making statements, Switch-case , arithmetic operators, relational operators etc
 
-int x = 20;
-int y = 18;
-if (x > y) {
-  cout<< "x is greater than y";
-}
+* Theory:
 
-The else Statement
-int time = 20;
-if (time < 18) {
-  cout<< "Good day.";
+In programming, conditional statements are used to perform different actions based on specific conditions or logical decisions. They allow a program to evaluate expressions and execute different blocks of code depending on whether a condition is true or false. In C++, the most commonly used conditional structures include if, else if, else, and switch-case.
+
+These control structures are essential for building dynamic and interactive applications, where program behavior must change in response to user inputs or variable states. They help in implementing decision-making abilities, ensuring the program follows the correct logical path based on given data. By using conditional statements effectively, developers can write flexible, readable, and robust code that can handle a wide range of real-world scenarios.
+
+
+🔹 Types of Conditional Statements in C++:
+1. *If-Else Statements:*
+Used to execute different blocks of code depending on whether a condition is true or false.
+
+🔸 Syntax:
+
+if (condition) {
+
+   // code block if condition is true
+   
 } else {
-  cout<< "Good evening.";
+
+   // code block if condition is false
+   
 }
-// Outputs "Good evening."
+🔸 Example:
 
-The else if Statement
-int time = 22;
-if (time < 10) {
-  cout<< "Good morning.";
-} else if (time < 20) {
-  cout<< "Good day.";
-} else {
-  cout<< "Good evening.";
+if (marks >= 50)
+
+   cout << "Pass";
+   
+else
+
+   cout << "Fail";
+   
+   
+2. *Else-If Ladder:*
+Used when multiple conditions need to be checked in sequence.
+
+🔸 Example:
+
+if (marks >= 90)
+
+   cout << "Grade A+";
+   
+else if (marks >= 80)
+
+   cout << "Grade A";
+   
+else
+
+   cout << "Grade B or below";
+   
+   
+3. *Switch-Case Statement:*
+Used to select one of many code blocks to be executed. Best for checking a variable against multiple constant values.
+
+🔸 Syntax:
+
+switch (choice) {
+
+   case 1: // statements;
+           break;
+           
+   case 2: // statements;
+           break;
+   default: // statements;
+   
 }
-// Outputs "Good evening."
 
-Algorithm: Check Whether a Number is Even or Odd
-Start
+🔸 Example:
 
-Declare an integer variable num.
+switch (day) {
 
-Input:
-3.1 Prompt the user to enter a number.
-3.2 Store the input in variable num.
+   case 1: cout << "Monday"; break;
+   
+   case 2: cout << "Tuesday"; break;
+   
+   default: cout << "Invalid day";
+   
+}
 
-Check if the number is even:
-4.1 Use the condition if (num % 2 == 0)
-4.2 If true, print "The number is even."
-4.3 Else, print "The number is odd."
 
-End
 
-Algorithm: Find the Largest of Three Numbers
-Start
+These control structures help create dynamic, logic-driven programs that react to user input or variable values.
 
-Declare three integer variables: a, b, and c.
 
-Input:
-3.1 Prompt the user to enter three numbers.
-3.2 Store the values in a, b, and c.
+# Check Whether a Number is Even or Odd:
 
-Compare the numbers using nested if statements:
-4.1 If a >= b and a > c, then a is the largest → Print a is the largest.
-4.2 Else if b >= a and b > c, then b is the largest → Print b is the largest.
-4.3 Else if c > a and c > b, then c is the greatest → Print c is the greatest.
+This program demonstrates how to use conditional statements (if-else) in C++ to determine whether a number is even or odd. An even number is divisible by 2 (i.e., num % 2 == 0), while an odd number leaves a remainder of 1.
 
-End
+*ALGORITHM*
 
-Algorithm: Check Whether a Character is a Vowel or Consonant
-Start
+1> Start
 
-Declare a character variable c.
+2> Declare an integer variable num.
 
-Input:
-3.1 Prompt the user to enter a character.
-3.2 Store the input in variable c.
+3> Take input from the user and store it in num.
 
-Check if the character is a vowel:
-4.1 Use the condition:
-if (c == 'a' | c == 'e' | c == 'i' | c == 'o' | c == 'u' | c == 'A' | c == 'E' | c == 'I' | c == 'O' | c == 'U')
-(Note: | should ideally be || for logical OR in C++)
+4> Use the condition:
+    * If num % 2 == 0, print "The number is even."
+    * Else, print "The number is odd."
 
-Output:
-5.1 If the condition is true, print "The character is a vowel."
-5.2 Else, print "The character is a consonant."
+5> End
 
-End
 
-Algorithm: Simulate Movement-Based Choices Using Switch in C++
-Start
+# Find the Largest of Three Numbers:
 
-Declare a character variable move1
+This program uses conditional logic (nested if statements) to compare three integers and determine which one is the greatest. It demonstrates the use of relational and logical operators in decision-making. Such logic is fundamental when handling conditions in real-life problem-solving through code.
 
-Input first move:
-3.1 Prompt the user: 'w' for up, 'a' for left, 's' for down, 'd' for right
-3.2 Store input in move1
-3.3 Use a switch-case to display the direction moved
+*ALGORITHM*
 
-Declare a character variable move2
+1> Start
 
-Input second move:
-5.1 Prompt the user for the next move
-5.2 Store input in move2
-5.3 Use switch-case to display the second direction moved
+2> Declare three integer variables: a, b, and c.
 
-Declare a character variable move3
+3> Take input from the user for a, b, and c.
 
-Input final move:
-7.1 Prompt the user for the final move
-7.2 Store input in move3
-7.3 Use switch-case to:
+4> Use conditional logic to compare the numbers:
 
-Show movement direction
+  * If a >= b and a > c, print "a is the largest".
 
-Display the final game outcome (lake, maze escape, forest, insect room, or invalid move)
+  * Else if b >= a and b > c, print "b is the largest".
 
-End
+  * Else if c > a and c > b, print "c is the greatest".
 
-Algorithm: Perform Arithmetic Operations Using Switch Case in C++
-Start
+5> End
 
-Declare variables:
-2.1 x, y as integers for input numbers
-2.2 choice as a character for the operation selection
+# Check Whether a Character is a Vowel or Consonant:
 
-Input two numbers:
-3.1 Prompt the user to enter the first number and store it in x
-3.2 Prompt the user to enter the second number and store it in y
+This program determines whether a given character is a vowel or a consonant using a conditional if-else statement. It checks both uppercase and lowercase vowels. Logical OR (||) is used to compare the character against all vowel options. This type of decision-making is useful in text processing and language-related programs.
 
-Display operation menu:
-4.1 Show options:
+*ALGORITHM*
 
-1 for Addition
+1> Start
 
-2 for Subtraction
+2> Declare a character variable c.
 
-3 for Multiplication
+3> Input:
 
-4 for Division
+  * Prompt the user to enter a character.
 
-Any other number to exit
+  * Store the input in variable c.
 
-Take user input for operation and store it in choice
+4> Check if the character is a vowel:
 
-Use switch-case to perform operations based on choice:
-6.1 If choice == '1', perform addition and display result
-6.2 If choice == '2', perform subtraction and display result
-6.3 If choice == '3', perform multiplication and display result
-6.4 If choice == '4', perform division and display result
-6.5 If choice doesn't match any case, display "This is a wrong choice."
+  * Use the condition:
 
-End
-Conclusion:
+  * if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' ||
+    c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
+    
+5> Output:
+
+  * If true, print: "The character is a vowel."
+
+  * Else, print: "The character is a consonant."
+
+6> End
+
+# Switch and break case program (Simulate Movement-Based Choices Using Switch in C++)(Game):
+
+This program simulates a directional movement-based game using the switch-case control structure in C++. The user is prompted to input three character moves: 'w' (up), 'a' (left), 's' (down), or 'd' (right). Each move is evaluated individually, and a final outcome is shown based on the last move. switch-case is used to improve clarity and efficiency when handling multiple fixed choices.
+
+*ALGORITHM*
+
+1> Start
+
+2> Declare a character variable move1.
+
+3> Input First Move:
+
+  * Prompt the user: 'w' for up, 'a' for left, 's' for down, 'd' for right
+
+  * Store input in move1
+
+  * Use switch(move1) to display the direction moved.
+
+4> Declare a character variable move2.
+
+5> Input Second Move:
+
+  * Prompt the user for the next move
+
+  * Store input in move2
+
+  * Use switch(move2) to display the direction moved.
+
+6> Declare a character variable move3.
+
+7> Input Final Move:
+
+  * Prompt the user for the final move
+
+  * Store input in move3
+
+  * Use switch(move3) to:
+
+  * Display movement direction
+
+8> Display the final game outcome:
+
+  * 'w' → "You fell into a lake"
+
+  * 'a' → "You escaped the maze"
+
+  * 's' → "You are in a dark forest"
+
+  * 'd' → "You entered the insect room"
+
+  * default → "Invalid final move"
+
+9> End
+
+# Program of a calculator using Switch Case in C++:
+
+This program demonstrates the use of switch-case in C++ to perform basic arithmetic operations like addition, subtraction, multiplication, and division. The user inputs two numbers and selects the desired operation from a menu. Based on the user's choice, the corresponding case executes. If the input does not match any valid operation, a default message is shown. This structure helps implement clear, efficient branching for fixed options.
+
+*ALGORITHM*
+
+1> Start
+
+2> Declare variables:
+
+  * x, y as integers for numbers
+
+  * choice as a character for operation selection
+
+3> Input:
+
+  * Prompt user to enter first number → store in x
+
+  * Prompt user to enter second number → store in y
+
+4> Display menu:
+
+  * 1 for Addition
+
+  * 2 for Subtraction
+
+  * 3 for Multiplication
+
+  * 4 for Division
+
+  * Any other number to Exit
+
+5> Input operation choice → store in choice
+
+6> Use switch-case:
+
+  * Case '1': Perform x + y, display result
+
+  * Case '2': Perform x - y, display result
+
+  * Case '3': Perform x * y, display result
+
+  * Case '4': Perform x / y, display result
+
+  * Default: Show “This is a wrong choice.”
+
+7> End
+
+# Conclusion:
+  
 In this experiment, we learned how to use decision-making statements in C++ such as if, if-else, else-if ladder, and switch. These statements allow the program to take logical decisions based on conditions. By implementing various examples, we understood how the flow of control changes depending on different inputs. This experiment helped us develop logical thinking and understand how real-world decisions can be programmed efficiently.
 
 
